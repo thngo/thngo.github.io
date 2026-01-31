@@ -28,8 +28,7 @@ describe('Contact', () => {
     expect(emailInput).toHaveAttribute('type', 'email');
   });
 
-  it('shows alert on form submission', () => {
-    const alertSpy = vi.spyOn(window, 'alert').mockImplementation(() => {});
+  it('shows loading state on form submission', async () => {
     render(<Contact />);
 
     const nameInput = screen.getByLabelText('Full Name');
@@ -40,10 +39,10 @@ describe('Contact', () => {
     fireEvent.change(nameInput, { target: { value: 'John Doe' } });
     fireEvent.change(emailInput, { target: { value: 'john@example.com' } });
     fireEvent.change(messageInput, { target: { value: 'Test message' } });
-    fireEvent.click(submitButton);
 
-    expect(alertSpy).toHaveBeenCalledWith('Thank you for your message! (This is a demo)');
-    alertSpy.mockRestore();
+    // Button should be disabled during submission
+    fireEvent.click(submitButton);
+    expect(submitButton).toBeDisabled();
   });
 
   it('prevents default form submission', () => {
