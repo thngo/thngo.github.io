@@ -1,0 +1,5 @@
+{
+  "name": "NGO",
+  "description": "A personal website featuring professional profiles, contact information, and miscellaneous pages. The design is clean, minimal, and responsive, with content loaded dynamically from JSON files.",
+  "requestFramePermissions": []
+}
