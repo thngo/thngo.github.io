@@ -14,23 +14,33 @@ const Contact: React.FC = () => {
     const form = e.currentTarget;
     const data = new FormData(form);
 
+    // Get Web3Forms Access Key from environment variable
+    // Sign up at https://web3forms.com to get your access key
+    // Add to .env.local: VITE_WEB3FORMS_KEY=your_access_key
+    const accessKey = import.meta.env.VITE_WEB3FORMS_KEY;
+
+    if (!accessKey) {
+      setErrorMessage('Contact form is not configured. Please add VITE_WEB3FORMS_KEY to .env.local');
+      setStatus('error');
+      return;
+    }
+
+    // Add Web3Forms access key to form data
+    data.append('access_key', accessKey);
+
     try {
-      // Replace 'YOUR_FORM_ID' with your actual Formspree form ID
-      // Sign up at https://formspree.io to get your form endpoint
-      const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         body: data,
-        headers: {
-          Accept: 'application/json',
-        },
       });
 
-      if (response.ok) {
+      const result = await response.json();
+
+      if (result.success) {
         setStatus('success');
         form.reset();
       } else {
-        const result = await response.json();
-        setErrorMessage(result.error || 'Something went wrong. Please try again.');
+        setErrorMessage(result.message || 'Something went wrong. Please try again.');
         setStatus('error');
       }
     } catch (error) {
