@@ -8,7 +8,9 @@
     ],
     "images": ["https://media.licdn.com/dms/image/v2/C5603AQF4WM2zQiV5Bw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1626693567023?e=1771459200&v=beta&t=dBp90N-miANzTIqTZtHj3vdNRMS97pDwmfq3zcBdaqA"],
     "socials": {
-      "linkedin": "https://www.linkedin.com/in/amythaongo/"
+      "github": "",
+      "linkedin": "https://www.linkedin.com/in/amythaongo/",
+      "googleScholar": ""
     }
   },
   "papers": [
@@ -27,6 +29,7 @@
       "url": "https://dox.utdallas.edu/publication1197"
     }
   ],
+  "talks": [],
   "awards": [
     {
       "year": 2020,
