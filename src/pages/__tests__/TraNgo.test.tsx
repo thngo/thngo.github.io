@@ -83,9 +83,7 @@ describe('TraNgo', () => {
   });
 
   it('shows error message on fetch failure', async () => {
-    (global.fetch as ReturnType<typeof vi.fn>).mockRejectedValueOnce(
-      new Error('Network error')
-    );
+    (global.fetch as ReturnType<typeof vi.fn>).mockRejectedValueOnce(new Error('Network error'));
 
     render(
       <BrowserRouter>
@@ -130,7 +128,9 @@ describe('TraNgo', () => {
     await waitFor(
       () => {
         const links = screen.getAllByRole('link');
-        const githubLink = links.find((link) => link.getAttribute('href') === 'https://github.com/test');
+        const githubLink = links.find(
+          (link) => link.getAttribute('href') === 'https://github.com/test'
+        );
         expect(githubLink).toBeDefined();
       },
       { timeout: 3000 }

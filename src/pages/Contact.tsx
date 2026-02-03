@@ -20,7 +20,9 @@ const Contact: React.FC = () => {
     const accessKey = import.meta.env.VITE_WEB3FORMS_KEY;
 
     if (!accessKey) {
-      setErrorMessage('Contact form is not configured. Please add VITE_WEB3FORMS_KEY to .env.local');
+      setErrorMessage(
+        'Contact form is not configured. Please add VITE_WEB3FORMS_KEY to .env.local'
+      );
       setStatus('error');
       return;
     }
