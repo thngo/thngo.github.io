@@ -8,7 +8,7 @@ A modern, performant personal website showcasing academic research, publications
 - 📱 **Responsive Design**: Mobile-first approach with Tailwind CSS
 - ♿ **Accessible**: Semantic HTML and ARIA labels
 - 🎨 **Modern UI**: Clean, professional design with animated loading states
-- 📧 **Functional Contact Form**: Integrated with Formspree
+- 📧 **Functional Contact Form**: Integrated with Web3Forms
 - 🔍 **SEO Optimized**: Meta tags, sitemap, robots.txt, Open Graph tags
 - ✅ **Type Safe**: Full TypeScript coverage
 - 🧪 **Well Tested**: Unit and integration tests with Vitest
@@ -51,7 +51,7 @@ A modern, performant personal website showcasing academic research, publications
 
 ```bash
 git clone <repository-url>
-cd TraProject1_basicWebsite
+cd thngo.github.io
 ```
 
 ### 2. Install dependencies
@@ -60,10 +60,16 @@ cd TraProject1_basicWebsite
 npm install
 ```
 
-### 3. Configure environment (optional)
+### 3. Configure environment
 
-If using the contact form, sign up at [Formspree](https://formspree.io) and update:
-- `src/pages/Contact.tsx` line 68: Replace `YOUR_FORM_ID` with your form ID
+**Contact Form Setup (Web3Forms):**
+- Sign up at [Web3Forms](https://web3forms.com)
+- Create a new contact form and get your Access Key
+- Create `.env.local`:
+  ```env
+  VITE_WEB3FORMS_KEY=your_web3forms_access_key
+  ```
+- Update `src/pages/Contact.tsx` with your key
 
 ## Development
 
@@ -211,61 +217,78 @@ dist/
 
 ## Deployment
 
-### Deploy to Vercel
+### GitHub Pages (Recommended)
 
-1. **Install Vercel CLI**
-   ```bash
-   npm i -g vercel
-   ```
+Everything is pre-configured for automatic deployment via GitHub Actions!
 
-2. **Login**
-   ```bash
-   vercel login
-   ```
+**One-time setup:**
+1. Go to your GitHub repo → **Settings** → **Pages**
+2. Under "Build and deployment" → Source: **GitHub Actions**
+3. Save
 
-3. **Deploy**
-   ```bash
-   vercel --prod
-   ```
+**Deploy:**
+```bash
+# Just push to main branch
+git add .
+git commit -m "Your changes"
+git push origin main
 
-4. **Configure GitHub integration** for automatic deployments
+# GitHub Actions automatically builds and deploys!
+# Site will be live in ~2-3 minutes
+```
 
-### Deploy to Netlify
+**Your site URL:**
+```
+https://[username].github.io/thngo.github.io
+```
 
-1. **Install Netlify CLI**
-   ```bash
-   npm i -g netlify-cli
-   ```
-
-2. **Login**
-   ```bash
-   netlify login
-   ```
-
-3. **Deploy**
-   ```bash
-   netlify deploy --prod
-   ```
-
-### Configuration Files
-
-Both platforms are pre-configured:
-- `vercel.json` - Vercel SPA fallback routing
-- `netlify.toml` - Netlify redirects for client-side routing
+**Manual deployment (if needed):**
+```bash
+npm run deploy
+```
 
 ### Environment Variables
 
-No environment variables required for basic deployment.
+Create `.env.local` (not committed to git):
+```env
+# Web3Forms Contact Form
+VITE_WEB3FORMS_KEY=your_web3forms_access_key
+```
 
-If using contact form:
-- Update `src/pages/Contact.tsx` with Formspree form ID
+### Configuration
 
-### Custom Domain
+- `.github/workflows/github-pages.yml` - Automatic CI/CD pipeline
+- `vite.config.ts` - Build configuration with GitHub Pages base path
 
-Update these files with your domain:
-- `index.html` - Meta tags (og:url, twitter:url)
-- `public/sitemap.xml` - All URLs
-- `public/robots.txt` - Sitemap URL
+### Custom Domain (Optional)
+
+Want a custom domain like `www.yourname.com`?
+
+1. Update `vite.config.ts`:
+   ```typescript
+   base: '/', // Change from '/thngo.github.io/'
+   ```
+
+2. Add `CNAME` file to `public/`:
+   ```
+   www.yourname.com
+   ```
+
+3. Update DNS settings at your domain registrar
+
+4. In GitHub: Settings → Pages → Add custom domain
+
+### Before First Deployment
+
+**Checklist:**
+- [ ] Set `VITE_WEB3FORMS_KEY` environment variable (sign up at [Web3Forms](https://web3forms.com))
+- [ ] Update domain in meta tags (index.html)
+- [ ] Update sitemap.xml with your domain
+- [ ] Update robots.txt with your domain
+- [ ] Add favicon.ico and og-image.jpg to public/
+- [ ] Run tests: `npm test -- --run`
+- [ ] Build locally: `npm run build`
+- [ ] Preview: `npm run preview`
 
 ## Code Quality
 
@@ -304,31 +327,55 @@ npm run type-check
 
 ## Performance
 
-### Metrics
+### Current Metrics
 
-| Metric | Target | Actual |
-|--------|--------|--------|
-| First Contentful Paint | <1.5s | TBD* |
-| Largest Contentful Paint | <2.5s | TBD* |
-| Lighthouse Score | >90 | TBD* |
-| Initial JS (gzipped) | <150KB | 76KB ✅ |
-| Initial CSS (gzipped) | <50KB | 5KB ✅ |
-| Total Initial Load | <200KB | 81KB ✅ |
+| Metric | Target | Actual | Status |
+|--------|--------|--------|--------|
+| **Initial JS** (gzipped) | <150KB | 76KB | ✅ 49% under |
+| **Initial CSS** (gzipped) | <50KB | 5KB | ✅ 90% under |
+| **Total Initial Load** | <200KB | 81KB | ✅ 59% under |
+| **First Contentful Paint** | <1.5s | TBD* | ⏳ |
+| **Largest Contentful Paint** | <2.5s | TBD* | ⏳ |
+| **Lighthouse Score** | >90 | TBD* | ⏳ |
 
-*Run Lighthouse audit on deployed site
+*Run Lighthouse audit locally: `npm run build && npm run preview` then use Chrome DevTools
+
+### Code-Split Route Chunks
+
+Each route is lazy-loaded as a separate chunk:
+
+| Route | Size | Gzipped |
+|-------|------|---------|
+| TraNgo | 7.27 KB | 2.44 KB |
+| Contact | 3.57 KB | 1.40 KB |
+| NotFound | 0.66 KB | 0.39 KB |
+| About | 0.55 KB | 0.38 KB |
+| AmyNgo | 0.31 KB | 0.23 KB |
+| SmiFsm | 0.31 KB | 0.24 KB |
+
+Users only download route code when they navigate to that page.
 
 ### Optimizations Applied
 
 - ✅ Code splitting with React.lazy()
 - ✅ Route-based chunking
 - ✅ Tree shaking (Vite)
-- ✅ Minification
-- ✅ Gzip compression
+- ✅ Minification & gzip compression
 - ✅ DNS prefetch for fonts
-- ✅ Font display: swap
-- ✅ Optimized Tailwind CSS (JIT)
+- ✅ Font display: swap (prevents invisible text)
+- ✅ Optimized Tailwind CSS (Just-in-Time compiler)
 
-See `PERFORMANCE.md` for detailed analysis.
+### Run Performance Audit
+
+```bash
+# Build and preview production build
+npm run build
+npm run preview
+
+# In Chrome: F12 → Lighthouse → Run audit
+# Or use Lighthouse CLI
+npx lighthouse http://localhost:4173
+```
 
 ## Browser Support
 
