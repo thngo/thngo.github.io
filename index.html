@@ -8,13 +8,13 @@
   <title>Ngo Portfolio</title>
   <meta name="title" content="Ngo Portfolio">
   <meta name="description" content=".">
-  <meta name="keywords" content="portfolio">
+  <meta name="keywords" content="Ngo Portfolio">
   <meta name="author" content="Ngo">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://thngo.github.io/">
-  <meta property="og:title" content="Portfolio">
+  <meta property="og:title" content="Ngo">
   <meta property="og:description" content="portfolio: research, publications, talks, and projects.">
   <meta property="og:image" content="https://github.com/thngo/thngo.github.io/blob/c2ce2256375cb10aee318c184e2cdb0e4b41a854/assets/mycat.jpg">
 
@@ -23,7 +23,7 @@
   <meta property="twitter:url" content="https://thngo.github.io/">
   <meta property="twitter:title" content="Ngo Portfolio">
   <meta property="twitter:description" content="portfolio showcasing research, publications, talks, and projects">
-  <meta property="twitter:image" content="https://thngo.github.io/og-image.jpg">
+  <meta property="twitter:image" content="https://avatars.githubusercontent.com/u/8153460?v=4">
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -31,6 +31,18 @@
 
   <!-- Theme Color -->
   <meta name="theme-color" content="#14b8a6">
+
+  <!-- GitHub Pages SPA redirect handler -->
+  <script>
+    // Restore the path after redirect from 404.html
+    (function() {
+      var redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect !== location.href) {
+        history.replaceState(null, null, redirect);
+      }
+    })();
+  </script>
 
   <!-- Performance: DNS Prefetch & Preconnect -->
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
