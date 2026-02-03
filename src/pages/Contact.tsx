@@ -43,7 +43,7 @@ const Contact: React.FC = () => {
         setErrorMessage(result.message || 'Something went wrong. Please try again.');
         setStatus('error');
       }
-    } catch (error) {
+    } catch {
       setErrorMessage('Network error. Please check your connection and try again.');
       setStatus('error');
     }
@@ -61,7 +61,7 @@ const Contact: React.FC = () => {
         {status === 'success' && (
           <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-md">
             <p className="text-green-800 text-center font-medium">
-              Thank you for your message! I'll get back to you soon.
+              Thank you for your message! I&apos;ll get back to you soon.
             </p>
           </div>
         )}
