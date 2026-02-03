@@ -2,9 +2,9 @@
   "aboutMe": {
     "title": "ABOUT ME",
     "paragraphs": [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. I am a passionate researcher with a focus on single-molecule biophysics and computer vision.",
-      "My work involves developing novel imaging techniques and computational tools to understand the intricate dynamics of cellular processes at the molecular level. I am always excited to tackle new challenges and collaborate on innovative projects."
+      "A strategic thinker with a strong bias toward goals and outcomes, known for steady perseverance and the ability to drive complex initiatives to completion.",
+      "A financial leader with cross‑market expertise spanning the United States and Australia.",
+      "I bench harder than you."
     ],
     "images": ["https://media.licdn.com/dms/image/v2/C5603AQF4WM2zQiV5Bw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1626693567023?e=1771459200&v=beta&t=dBp90N-miANzTIqTZtHj3vdNRMS97pDwmfq3zcBdaqA"],
     "socials": {
@@ -29,17 +29,17 @@
       "url": "https://dox.utdallas.edu/publication1197"
     }
   ],
-  "talks": [],
+  "talks": [
+    {
+      "year": 2023,
+      "description": "Panel Guest, Women in Banking Breakfast. Sydney, AUS."
+    }
+  ],
   "awards": [
     {
-      "year": 2020,
-      "name": "Excellence in Research Award",
-      "institution": "UT Southwestern Medical Center"
-    },
-    {
-      "year": 2018,
-      "name": "Outstanding Graduate Student Fellowship",
-      "institution": "UT Southwestern Medical Center"
+      "year": 2021,
+      "name": "Level I",
+      "institution": "CFA Institute"
     }
   ],
   "miscellaneous": [

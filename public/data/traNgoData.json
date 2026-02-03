@@ -3,9 +3,11 @@
     "title": "ABOUT ME",
     "paragraphs": [
       "Computational biologist, experienced with building image analysis and ML pipelines for bench biologists. ",
-      "A strong team player with a passion for learning, teaching, and effective communication in interdisciplinary, multicultural, and high-stakes environments."
+      "A strong team player with a passion for learning, teaching, and effective communication in interdisciplinary, multicultural, and high-stakes environments.",
+      "My previous work involves developing novel imaging techniques and computational tools to understand the intricate dynamics of cellular processes at the molecular level.",
+      "My interests are at the intersection of Artificial Intelligence, healthcare innovation, and basic biological discovery. I am always excited to tackle new challenges and collaborate on innovative projects."
     ],
-    "images": ["https://avatars.githubusercontent.com/u/8153460?v=4", "https://github.com/thngo/thngo.github.io/blob/c2ce2256375cb10aee318c184e2cdb0e4b41a854/assets/mycat.jpg"],
+    "images": ["https://avatars.githubusercontent.com/u/8153460?v=4"],
     "socials": {
       "github": "https://github.com/thngo",
       "linkedin": "https://www.linkedin.com/in/tra-ngo/",
