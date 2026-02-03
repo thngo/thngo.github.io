@@ -12,13 +12,13 @@
       "googleScholar": "https://scholar.google.com/citations?user=nGlTcS0AAAAJ"
     }
   },
-  "papers": [
+  "papers": [    
     {
-      "year": 2023,
-      "authors": "Aparajita Dasgupta, Huong-Tra Ngo, Deryl Tschoerner, Nicolas Touret, Bruno da Rocha-Azevedo, Khuloud Jaqaman",
-      "title": "Multiscale imaging and quantitative analysis of plasma membrane protein-cortical actin interplay",
-      "journal": "Biophysical journal",
-      "url": "https://www.cell.com/biophysj/fulltext/S0006-3495(23)00507-6"
+      "year": 2026,
+      "authors": "Shinyoung Kang, Michael Holcomb, Ameer Hamza Shakur, David Hein, Huong-Tra Ngo, Hunter Schuler, Philip Jarrett, Thomas Dalton, Andrew R Jamieson",
+      "title": "Automated Assessment of OSCE Physical Exams using Multimodal AI",
+      "journal": "MedRxiv",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.01.09.26343786.abstract"
     },
     {
       "year": 2025,
@@ -28,11 +28,11 @@
       "url": "https://www.biorxiv.org/content/10.1101/2025.04.24.650515.abstract"
     },
     {
-      "year": 2026,
-      "authors": "Shinyoung Kang, Michael Holcomb, Ameer Hamza Shakur, David Hein, Huong-Tra Ngo, Hunter Schuler, Philip Jarrett, Thomas Dalton, Andrew R Jamieson",
-      "title": "Automated Assessment of OSCE Physical Exams using Multimodal AI",
-      "journal": "MedRxiv",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.01.09.26343786.abstract"
+      "year": 2023,
+      "authors": "Aparajita Dasgupta, Huong-Tra Ngo, Deryl Tschoerner, Nicolas Touret, Bruno da Rocha-Azevedo, Khuloud Jaqaman",
+      "title": "Multiscale imaging and quantitative analysis of plasma membrane protein-cortical actin interplay",
+      "journal": "Biophysical journal",
+      "url": "https://www.cell.com/biophysj/fulltext/S0006-3495(23)00507-6"
     }
   ],
   "talks": [
@@ -138,7 +138,7 @@
     }
   ],
   "getInTouch": {
-    "email": "tra.ngo@example.com",
-    "text": "Feel free to reach out for collaborations, questions, or just to say hello. The best way to contact me is via email."
+    "email": [],
+    "text": "Please use contact form."
   }
 }

@@ -6,44 +6,25 @@
       "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. I am a passionate researcher with a focus on single-molecule biophysics and computer vision.",
       "My work involves developing novel imaging techniques and computational tools to understand the intricate dynamics of cellular processes at the molecular level. I am always excited to tackle new challenges and collaborate on innovative projects."
     ],
-    "images": ["https://picsum.photos/400/300", "https://picsum.photos/400/301"],
+    "images": ["https://media.licdn.com/dms/image/v2/C5603AQF4WM2zQiV5Bw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1626693567023?e=1771459200&v=beta&t=dBp90N-miANzTIqTZtHj3vdNRMS97pDwmfq3zcBdaqA"],
     "socials": {
-      "github": "https://github.com",
-      "linkedin": "https://linkedin.com",
-      "googleScholar": "https://scholar.google.com/citations?user=nGlTcS0AAAAJ"
+      "linkedin": "https://www.linkedin.com/in/amythaongo/"
     }
   },
   "papers": [
     {
-      "year": 2021,
-      "authors": "Ngo T, et al.",
-      "title": "A Fictitious Paper on Advanced Microscopy.",
-      "journal": "Nature Methods, 18, 1-10.",
-      "url": "#"
+      "year": 2015,
+      "authors": "Shuval, Kerem; Leonard, Tammy; Nguyen, Binh T.; Ngo, Thao H.; Yaroch, Amy L.",
+      "title": "Behavioral Economics and Fruit and Vegetable Intake: The Fair Park Study",
+      "journal": "Health Behavior and Policy Review",
+      "url": "https://www.ingentaconnect.com/content/psp/hbpr/2015/00000002/00000002/art00001"
     },
     {
-      "year": 2020,
+      "year": 2014,
       "authors": "Ngo T, Smith J.",
-      "title": "Computational Analysis of Protein Dynamics.",
-      "journal": "Journal of Molecular Biology, 432(15), 4500-4515.",
-      "url": "#"
-    },
-    {
-      "year": 2019,
-      "authors": "Doe J, Ngo T.",
-      "title": "Another Junk Publication for Example.",
-      "journal": "Science, 365(6455), 780-785.",
-      "url": "#"
-    }
-  ],
-  "talks": [
-    {
-      "year": 2022,
-      "description": "Keynote Speaker, International Conference on Biophysics, Virtual."
-    },
-    {
-      "year": 2021,
-      "description": "Invited Talk, Gordon Research Conference on Single-Molecule Approaches to Biology, USA."
+      "title": "Behavioral economics and health economics: The relationship among patience, saving behavior, and health",
+      "journal": "The Exley",
+      "url": "https://dox.utdallas.edu/publication1197"
     }
   ],
   "awards": [
@@ -59,60 +40,57 @@
     }
   ],
   "miscellaneous": [
-    "I am an avid photographer and enjoy capturing landscapes and cityscapes.",
-    "In my free time, I contribute to open-source scientific software projects.",
-    "I also enjoy mentoring students and participating in science outreach programs."
+    "TOEFL 117/120",
+    "GRE 166 Q 159 V",
+    "I enjoy going to the gym."
   ],
   "timeline": [
     {
-      "title": "Research Operation Support/Project Manager",
-      "institution": "UTSW",
+      "title": "Investment Banking Associate",
+      "institution": "Grant Samuel",
       "side": "right"
     },
     {
-      "title": "Teaching Assistant",
-      "institution": "UTSW",
+      "title": "Analyst - M&A Valuations",
+      "institution": "Deloitte Australia",
       "side": "left"
     },
     {
-      "title": "Analyst Intern",
-      "institution": "PreScouter, Inc",
+      "title": "Senior Analyst - Audit/Financial Services",
+      "institution": "Deloitte Australia",
       "side": "right"
     },
     {
-      "title": "Analyst Intern",
-      "institution": "Mitogen Consulting Group",
+      "title": "Brand Ambassador",
+      "institution": "ETS",
       "side": "left"
     },
     {
-      "title": "Teaching Assistant",
-      "institution": "UTDallas",
+      "title": "Hedge Fund Accountant",
+      "institution": "Orangefield Group",
       "side": "right"
     },
     {
-      "title": "Research Fellow",
-      "institution": "UTSW",
+      "title": "Research Assistant",
+      "institution": "Harvard University",
       "side": "left"
     },
     {
-      "title": "CPRIT CURE Research Fellow",
-      "institution": "MD Anderson",
+      "title": "Research Assistant",
+      "institution": "UT Dallas",
       "side": "right"
     }
   ],
   "education": [
     {
-      "institution": "UT Southwestern Medical Center",
-      "degree": "Doctor of Philosophy, Genetics, Development, and Diseases",
-      "details": [
-        "Thesis: Single Molecule-Based Computer Vision Analysis of Cortical Actin-Plasma Membrane Protein Interplay"
-      ],
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nGlTcS0AAAAJ&citation_for_view=nGlTcS0AAAAJ:zYLM7Y9cAGgC"
+      "institution": "University of Technology Sydney",
+      "degree": "Master in Professional Accounting",
+      "details": []
     },
     {
       "institution": "UT Dallas",
-      "degree": "Bachelor of Science, Mathematics and Molecular Biology",
-      "details": ["Cum Laude, Collegium V Honors, and Major Honors."]
+      "degree": "Bachelor of Science, Economics, Finance, Performing Arts",
+      "details": ["Summa Cum Laude, Management Honors Program, and Dance Ensemble."]
     },
     {
       "institution": "Hanoi-Amsterdam High School for the Gifted",
@@ -121,7 +99,7 @@
     }
   ],
   "getInTouch": {
-    "email": "tra.ngo@example.com",
-    "text": "Feel free to reach out for collaborations, questions, or just to say hello. The best way to contact me is via email."
+    "email": [],
+    "text": "Please use contact form."
   }
 }
