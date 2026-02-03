@@ -251,6 +251,41 @@ This plan outlines a **5-phase approach** to transform the personal website from
      ```
   3. Test by navigating to `/invalid-route`
 
+#### 1.8 Remove Unused src/data/ Directory
+- **Priority:** 🟡 Medium
+- **Effort:** 10 minutes
+- **Description:** Delete the unused `src/data/` directory to eliminate confusion about which data files are actually used
+- **Success criteria:**
+  - `src/data/` directory deleted
+  - No broken imports or references
+  - Build succeeds without errors
+  - Site continues to work properly (uses `public/data/` instead)
+- **Files affected:**
+  - DELETE: `src/data/amyNgoData.json`
+  - DELETE: `src/data/traNgoData.json`
+  - DELETE: `src/data/me.json`
+  - DELETE: `src/data/` directory
+- **Background:**
+  - The application uses `fetch('/data/...')` which loads files from `public/data/`
+  - Files in `src/data/` are not imported or used anywhere
+  - Having duplicate data files causes confusion about which are the "source of truth"
+- **Steps:**
+  1. Verify that pages use `fetch('/data/...')` (not imports from `src/data/`)
+  2. Delete the directory:
+     ```bash
+     rm -rf src/data/
+     ```
+  3. Run dev server: `npm run dev`
+  4. Test all profile pages load correctly
+  5. Run build: `npm run build`
+  6. Verify build succeeds
+- **Testing checklist:**
+  - [ ] npm run dev starts successfully
+  - [ ] /profiles/tra-ngo loads correctly
+  - [ ] /profiles/amy-ngo loads correctly
+  - [ ] npm run build succeeds
+  - [ ] No console errors in browser
+
 ### Deliverables
 
 - [ ] Git repository initialized and configured
@@ -260,6 +295,7 @@ This plan outlines a **5-phase approach** to transform the personal website from
 - [ ] Tailwind configured with build process
 - [ ] BrowserRouter implemented
 - [ ] 404 page created
+- [ ] Unused src/data/ directory removed
 
 ### Risk Mitigation
 
