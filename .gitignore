@@ -33,6 +33,9 @@ Thumbs.db
 # Testing
 coverage
 
+# Documentation (local only)
+docs/
+
 # Temporary files
 *.tmp
 *.temp
