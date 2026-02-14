@@ -100,7 +100,7 @@ Opens at `http://localhost:5173` with hot module replacement (HMR).
 ## Project Structure
 
 ```
-TraProject1_basicWebsite/
+thngo.github.io/
 ├── public/                  # Static assets
 │   ├── sitemap.xml         # SEO sitemap
 │   └── robots.txt          # Search engine rules
