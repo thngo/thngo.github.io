@@ -1,51 +1,17 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-/**
- * Represents an item in the dropdown menu
- */
 interface DropdownItem {
-  /** Display text for the menu item */
   label: string;
-  /** React Router path to navigate to */
   path: string;
 }
 
-/**
- * Props for the Dropdown component
- */
 interface DropdownProps {
-  /** Text displayed on the dropdown button */
   title: string;
-  /** Array of navigation links to display in the menu */
   items: DropdownItem[];
 }
 
-/**
- * Dropdown navigation menu component with click-outside detection
- *
- * Features:
- * - Opens/closes on button click
- * - Automatically closes when clicking outside the menu
- * - Smooth rotation animation for the chevron icon
- * - Accessible with ARIA attributes
- *
- * @param props - Component props
- * @param props.title - Text displayed on the dropdown button
- * @param props.items - Array of navigation links to display in the menu
- *
- * @example
- * ```tsx
- * <Dropdown
- *   title="Profiles"
- *   items={[
- *     { label: 'Tra Ngo', path: '/profiles/tra-ngo' },
- *     { label: 'Amy Ngo', path: '/profiles/amy-ngo' }
- *   ]}
- * />
- * ```
- */
-const Dropdown: React.FC<DropdownProps> = ({ title, items }) => {
+function Dropdown({ title, items }: DropdownProps) {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -108,6 +74,6 @@ const Dropdown: React.FC<DropdownProps> = ({ title, items }) => {
       )}
     </div>
   );
-};
+}
 
 export default Dropdown;

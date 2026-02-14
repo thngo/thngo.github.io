@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import type { FormEvent } from 'react';
 
 type SubmissionStatus = 'idle' | 'loading' | 'success' | 'error';
 
-const Contact: React.FC = () => {
+function Contact() {
   const [status, setStatus] = useState<SubmissionStatus>('idle');
-  const [errorMessage, setErrorMessage] = useState<string>('');
+  const [errorMessage, setErrorMessage] = useState('');
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus('loading');
     setErrorMessage('');
@@ -14,9 +15,6 @@ const Contact: React.FC = () => {
     const form = e.currentTarget;
     const data = new FormData(form);
 
-    // Get Web3Forms Access Key from environment variable
-    // Sign up at https://web3forms.com to get your access key
-    // Add to .env.local: VITE_WEB3FORMS_KEY=your_access_key
     const accessKey = import.meta.env.VITE_WEB3FORMS_KEY;
 
     if (!accessKey) {
@@ -27,7 +25,6 @@ const Contact: React.FC = () => {
       return;
     }
 
-    // Add Web3Forms access key to form data
     data.append('access_key', accessKey);
 
     try {
@@ -59,7 +56,6 @@ const Contact: React.FC = () => {
           Have a question or want to work together? Fill out the form below.
         </p>
 
-        {/* Success Message */}
         {status === 'success' && (
           <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-md">
             <p className="text-green-800 text-center font-medium">
@@ -68,7 +64,6 @@ const Contact: React.FC = () => {
           </div>
         )}
 
-        {/* Error Message */}
         {status === 'error' && (
           <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-md">
             <p className="text-red-800 text-center font-medium">{errorMessage}</p>
@@ -154,6 +149,6 @@ const Contact: React.FC = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Contact;

@@ -1,0 +1,27 @@
+{
+  "familyName": "NGO",
+  "tagline": "Around the world, staying connected",
+  "profiles": [
+    {
+      "slug": "tra-ngo",
+      "name": "Tra Ngo",
+      "shortTitle": "Computational Biologist",
+      "location": { "city": "Dallas", "region": "TX", "country": "US" },
+      "avatar": "https://avatars.githubusercontent.com/u/8153460?v=4",
+      "template": "academic"
+    },
+    {
+      "slug": "amy-ngo",
+      "name": "Amy Ngo",
+      "shortTitle": "Investment Banking",
+      "location": { "city": "Sydney", "region": "NSW", "country": "AU" },
+      "avatar": "https://media.licdn.com/dms/image/v2/C5603AQF4WM2zQiV5Bw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1626693567023?e=1771459200&v=beta&t=dBp90N-miANzTIqTZtHj3vdNRMS97pDwmfq3zcBdaqA",
+      "template": "business"
+    }
+  ],
+  "nav": {
+    "showFeed": true,
+    "showContact": true,
+    "showAbout": true
+  }
+}

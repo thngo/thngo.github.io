@@ -10,7 +10,7 @@ describe('Header', () => {
         <Header />
       </BrowserRouter>
     );
-    expect(screen.getByText('Personal Site')).toBeInTheDocument();
+    expect(screen.getByText('NGO')).toBeInTheDocument();
   });
 
   it('renders navigation links', () => {
@@ -47,7 +47,7 @@ describe('Header', () => {
         <Header />
       </BrowserRouter>
     );
-    const homeLink = screen.getByText('Personal Site').closest('a');
+    const homeLink = screen.getByText('NGO').closest('a');
     expect(homeLink).toHaveAttribute('href', '/');
   });
 

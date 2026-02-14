@@ -1,7 +1,6 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
-const NotFound: React.FC = () => {
+function NotFound() {
   return (
     <div className="container mx-auto p-8 text-center min-h-[60vh] flex flex-col items-center justify-center">
       <h1 className="text-8xl font-bold text-gray-800 mb-4">404</h1>
@@ -17,6 +16,6 @@ const NotFound: React.FC = () => {
       </Link>
     </div>
   );
-};
+}
 
 export default NotFound;

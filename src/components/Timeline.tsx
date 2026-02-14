@@ -1,56 +1,10 @@
-import React from 'react';
-import { TimelineItem } from '../types';
+import type { TimelineItem } from '../types';
 
-/**
- * Props for the Timeline component
- */
 interface TimelineProps {
-  /** Array of timeline items to display */
   items: TimelineItem[];
 }
 
-/**
- * Vertical timeline visualization component
- *
- * Displays chronological events (education, career milestones, achievements)
- * in a visually appealing vertical timeline with a central axis.
- *
- * Features:
- * - Alternating left/right layout for items
- * - Central vertical line connecting all items
- * - Circular markers on the timeline
- * - Hover effects with glassmorphism
- * - Responsive design
- *
- * Each timeline item shows:
- * - Title (e.g., degree name, position)
- * - Institution (e.g., university, company)
- * - Date (optional)
- *
- * @param props - Component props
- * @param props.items - Array of timeline items with title, institution, date, and side
- *
- * @example
- * ```tsx
- * <Timeline
- *   items={[
- *     {
- *       title: 'Ph.D. in Biophysics',
- *       institution: 'University of Example',
- *       date: '2018-2023',
- *       side: 'left'
- *     },
- *     {
- *       title: 'B.S. in Biology',
- *       institution: 'College of Example',
- *       date: '2014-2018',
- *       side: 'right'
- *     }
- *   ]}
- * />
- * ```
- */
-const Timeline: React.FC<TimelineProps> = ({ items }) => {
+function Timeline({ items }: TimelineProps) {
   return (
     <div className="relative container mx-auto px-6 flex flex-col space-y-8">
       <div className="absolute z-0 w-2 h-full bg-gray-300 shadow-md inset-0 top-0 left-1/2 -ml-1"></div>
@@ -76,6 +30,6 @@ const Timeline: React.FC<TimelineProps> = ({ items }) => {
       ))}
     </div>
   );
-};
+}
 
 export default Timeline;

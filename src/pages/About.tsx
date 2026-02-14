@@ -1,6 +1,4 @@
-import React from 'react';
-
-const About: React.FC = () => {
+function About() {
   return (
     <div className="container mx-auto p-8 text-center">
       <h1 className="text-4xl font-bold">About This Site</h1>
@@ -11,6 +9,6 @@ const About: React.FC = () => {
       </p>
     </div>
   );
-};
+}
 
 export default About;

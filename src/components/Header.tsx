@@ -1,30 +1,7 @@
-import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import Dropdown from './Dropdown';
 
-/**
- * Main navigation header component
- *
- * Features:
- * - Fixed position at top of page
- * - Glassmorphism effect (translucent backdrop blur)
- * - Responsive design (hidden on mobile, shown on md+ breakpoints)
- * - Active link highlighting
- * - Dropdown menus for Profiles and Misc sections
- *
- * Navigation structure:
- * - Home (logo/brand link)
- * - About (direct link)
- * - Profiles (dropdown: Tra Ngo, Amy Ngo)
- * - Misc (dropdown: SMI-FSM)
- * - Contact (direct link)
- *
- * @example
- * ```tsx
- * <Header />
- * ```
- */
-const Header: React.FC = () => {
+function Header() {
   const profileItems = [
     { label: 'Tra Ngo', path: '/profiles/tra-ngo' },
     { label: 'Amy Ngo', path: '/profiles/amy-ngo' },
@@ -42,7 +19,7 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="text-xl font-bold text-gray-900">
-              Personal Site
+              NGO
             </Link>
           </div>
           <div className="hidden md:flex items-center space-x-4">
@@ -65,6 +42,6 @@ const Header: React.FC = () => {
       </nav>
     </header>
   );
-};
+}
 
 export default Header;

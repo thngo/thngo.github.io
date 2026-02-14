@@ -1,11 +1,12 @@
 import path from 'path';
+import { fileURLToPath } from 'url';
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-export default defineConfig(({ mode }) => {
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+export default defineConfig(() => {
   return {
-    // Base path for GitHub Pages user site (thngo.github.io)
-    // Always use '/' for user/organization pages
     base: '/',
     server: {
       port: 3000,

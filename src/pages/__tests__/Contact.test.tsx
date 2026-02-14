@@ -28,7 +28,7 @@ describe('Contact', () => {
     expect(emailInput).toHaveAttribute('type', 'email');
   });
 
-  it('shows loading state on form submission', async () => {
+  it('shows error when web3forms key is not configured', async () => {
     render(<Contact />);
 
     const nameInput = screen.getByLabelText('Full Name');
@@ -40,9 +40,11 @@ describe('Contact', () => {
     fireEvent.change(emailInput, { target: { value: 'john@example.com' } });
     fireEvent.change(messageInput, { target: { value: 'Test message' } });
 
-    // Button should be disabled during submission
     fireEvent.click(submitButton);
-    expect(submitButton).toBeDisabled();
+
+    // Without VITE_WEB3FORMS_KEY, should show configuration error
+    const errorMessage = await screen.findByText(/Contact form is not configured/);
+    expect(errorMessage).toBeInTheDocument();
   });
 
   it('prevents default form submission', () => {
