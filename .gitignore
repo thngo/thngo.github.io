@@ -33,8 +33,9 @@ Thumbs.db
 # Testing
 coverage
 
-# Documentation (local only)
+# Local only
 docs/
+scripts/export-chat.ts
 
 # Temporary files
 *.tmp
